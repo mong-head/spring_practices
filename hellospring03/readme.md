@@ -17,10 +17,10 @@
 
 <img src="https://user-images.githubusercontent.com/52481037/120448808-e4882280-c3c6-11eb-87ab-f13c9998bbb3.jpg" width="60%"/>
 
-1. request : hellospring03/hello
+* request : hellospring03/hello
   * tomcat의 DispatcherServlet으로 감
     * DispatcherServlet은 Spring Web 관련
-2. DispatcherServlet
+* DispatcherServlet
   * init()
     * Web Application Context생성
       * HandlerMapping : controller 내의 handler 정보 있는 객체; @RequestBody등의 annotation 여부도 저장되어 있음
