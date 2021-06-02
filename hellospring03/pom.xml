@@ -30,7 +30,7 @@
 			<version>${org.springframework-version}</version>
 		</dependency>
 		
-		<!-- spring web (dizpatcherServlet, ContextLoadListner, EncodingFilter) -->
+		<!-- spring web (dispatcherServlet, ContextLoadListner, EncodingFilter) -->
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-web</artifactId>
