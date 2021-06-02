@@ -3,7 +3,7 @@
 
 * 설정
 
-<img src="https://user-images.githubusercontent.com/52481037/120432178-83575380-c3b4-11eb-96f1-c5e2319ac853.jpg" width="60%"/>
+	<img src="https://user-images.githubusercontent.com/52481037/120432178-83575380-c3b4-11eb-96f1-c5e2319ac853.jpg" width="60%"/>
 
   * pom ([pom.xml](/pom.xml))
     * dependency
