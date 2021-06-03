@@ -34,7 +34,6 @@ public class GuestbookController {
 	
 	@RequestMapping(value="/delete", method=RequestMethod.POST )
 	public String delete(GuestbookVo vo) {
-		System.out.println(vo);
 		guestbookRepository.delete(vo);
 		return "redirect:/";
 	}
