@@ -14,6 +14,8 @@
 			* listener에서 사용할 Context Parameter설정
 		* spring-servlet.xml (web application context) 설정
 			* servlet
+		* EncodingFilter 설정
+			* 이 filter는 spring-web에서 제공해줌
 	* applicationContext.xml
 		* scanning : Repository 경로 설정
 			* spring의 3단 구성 (servlet, service, repository ) annotation 설정
@@ -21,5 +23,5 @@
 		* 이 xml을 사용해서 Root Application Context만듦
 			* ContextLoadListner 만들어지면 listener라서 ContextInitialize()가 실행되면서 application.xml참고하여 Root Application Context만듦
 	* spring-servlet.xml
-		* controller 경로 설정		
+		* scanning : Controller 경로 설정		
 	
