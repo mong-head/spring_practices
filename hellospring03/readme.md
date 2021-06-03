@@ -1,5 +1,9 @@
 # 1. HelloSpring
 
+* desc 
+
+	* war project -> web.xml 필요
+	* Spring MVC
 
 * 설정
 
@@ -34,6 +38,9 @@
 		
 		<bean id=" memberController" class= "com.example.controller.MemberController"> 
 		```
+  * targeted runtime 설정 : Apache tomcat v8.5 체크
+  * maven -> update 시키기
+		
 ## 1. Spring에서 Request처리 후 Response 과정
 
 <img src="https://user-images.githubusercontent.com/52481037/120448808-e4882280-c3c6-11eb-87ab-f13c9998bbb3.jpg" width="60%"/>
