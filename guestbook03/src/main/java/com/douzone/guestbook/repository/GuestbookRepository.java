@@ -1,4 +1,4 @@
-package com.douzone.guestbook.respository;
+package com.douzone.guestbook.repository;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -8,8 +8,11 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.springframework.stereotype.Repository;
+
 import com.douzone.guestbook.vo.GuestbookVo;
 
+@Repository
 public class GuestbookRepository {
 	private Connection getConnection() throws SQLException {
 		Connection conn = null;
