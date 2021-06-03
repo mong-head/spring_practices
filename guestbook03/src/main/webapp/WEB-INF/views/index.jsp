@@ -17,8 +17,7 @@
 <title>방명록</title>
 </head>
 <body>
-	<form action="${pageContext.request.contextPath }" method="post">
-		<input type='hidden' name="a" value="add">
+	<form action="${pageContext.request.contextPath }/add" method="post">
 	<table border=1 width=500>
 		<tr>
 			<td>이름</td><td><input type="text" name="name"></td>
@@ -40,7 +39,7 @@
 				<td>${vo.name }</td>
 				<c:set var="regDateArr" value="${fn:split(vo.regDate,' ')}"></c:set>
 				<td>${regDateArr[0] }</td>
-				<td><a href="${pageContext.request.contextPath }/form&no=${vo.no}">삭제</a></td>
+				<td><a href="${pageContext.request.contextPath }/delete/${vo.no}">삭제</a></td>
 			</tr>
 			<tr>
 				<td colspan=4>${fn:replace(vo.message ,newline,"<br/>")}</td>
