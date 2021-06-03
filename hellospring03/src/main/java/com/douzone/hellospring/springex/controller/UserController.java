@@ -47,6 +47,12 @@ public class UserController {
 		 * 3. required=true, defaultValue="" : good 방법, 근데 사실 param부분이 긴 것도 좋지는 않음
 		 * 		defaultValue의 경우  parameter가 int라도 String으로 받아야함
 		 * 			(@RequestParam(value="p", required=true, defalutValue="1") int page)
+		 * 
+		 * <request를 받고 싶은 경우>
+		 * 물론 (HttpServletRequest request, @RequestParam(~~)) 할 수는 있지만, Spring정신과 맞지 않음
+		 * 		(HttpServletRequest 에는 Http, Servlet 두 기술이 함께 들어있음)
+		 * 		(Spring에서는 Servlet을 버리려고 함)
+		 * 이미 다른 편한 방법을 제공하고 있음
 		 */
 		// 2번 째 방법
 //		if(name == null) {
