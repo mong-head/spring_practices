@@ -36,3 +36,13 @@
 
 ## 1. @RequestMapping, @RequestBody 연습
 
+* Controller인 경우 @Controller annotation사용해야 HandlerMapping객체가 찾을 수 있음
+
+* RequestBody 없는 경우 : forwarding (jsp)
+	* HelloController
+		* return string OR return ModelAndView
+		* Model이 나오면 무조건 jsp로 넘긴다고 생각하면 됨
+		
+* UserController 방식 많이 볼 것임
+
+

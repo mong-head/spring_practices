@@ -26,8 +26,8 @@ public class HelloController {
 	@RequestMapping("/hello3")
 	public ModelAndView hello3(String name) {
 		ModelAndView mav = new ModelAndView();
-		mav.addObject("name", name); //view name 뽑아내기
-		mav.setViewName("/WEB-INF/views/hello3.jsp");  //view name 뽑아내기
+		mav.addObject("name", name);
+		mav.setViewName("/WEB-INF/views/hello3.jsp"); 
 		return mav; 
 	}
 	
