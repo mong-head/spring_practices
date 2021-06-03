@@ -13,6 +13,27 @@
     * plugin
       * war plugin
 
+  * web.xml
+	* DispatcherServlet 설정하기
+
+  * spring-servlet.xml ([spring.xml](/src/main.webapp/WEB-INF/spring-servlet.xml))
+	* spring-servlet에서 spring은 web.xml에서 내가 dispatcherServlet이름 설정한 이름
+	*  controller 설정 시, 설정한 controller 경로 밑의 package의 controller도 모두 찾아줌
+		```xml
+		<context:component-scan base-package="com.douzone.hellospring.springex.controller" />
+		```
+	* 3버전 전에(annotaion)이 없는 경우, controller 이외에도 handler도 여기에서 설정해줬음. 현재는 위의 줄 처럼 controller만 설정해주면 @RequestMapping이라는 annotation을 보고 handler mapping을 할 수 있음
+		```xml
+		<bean  id="urlMapping" class="org.springframework.web.servlet.handler.SimpleUrlHandlerMapping" >
+		     <property name="mappings">
+		           <props>
+			  <prop key="/member">memberController</prop>
+		           </props>
+		     </property>
+		</bean>
+		
+		<bean id=" memberController" class= "com.example.controller.MemberController"> 
+		```
 ## 1. Spring에서 Request처리 후 Response 과정
 
 <img src="https://user-images.githubusercontent.com/52481037/120448808-e4882280-c3c6-11eb-87ab-f13c9998bbb3.jpg" width="60%"/>
@@ -34,7 +55,7 @@
       * 없는 경우 : return값인 String이나 Model에서 ViewName을 뽑아 내어 jsp로 감 -> response
       * 있는 경우 : String이나 Object에서 HTML등의 내용을 변환하여 바로 browser화면에 메세지 출력 -> response
 
-## 1. @RequestMapping, @RequestBody 연습
+## 2. @RequestBody 연습
 
 * Controller인 경우 @Controller annotation사용해야 HandlerMapping객체가 찾을 수 있음
 
@@ -43,6 +64,56 @@
 		* return string OR return ModelAndView
 		* Model이 나오면 무조건 jsp로 넘긴다고 생각하면 됨
 		
-* UserController 방식 많이 볼 것임
+* RequestBody 있는 경우 : 바로 browser로 message보냄
+	* GuestbookController
+		* return한 string이 browser에 그대로 출력되는 모습을 볼 수 있음
 
+## 3. @RequestMappping 연습
 
+1. method(handler) 단독 mapping
+	* class에는 annotation사용하지 않고, handler에 사용
+	* BoardController
+
+2. class type mapping
+	* class에만 annotaion 사용
+	* GuestbookController
+
+3. class + handler (good)
+	* class에도 annotation사용, method(handler)에도 annotation 사용
+	* UserController
+
+* UserController 방식(class에도 mapping, method에도 mapping) 많이 볼 것임
+
+## 4. @RequestParam 연습
+
+* Restful; CRUD method에 따라 같은 url임에도 다르게 행동하도록 할 수 있음
+
+	* CRUD
+	
+	    ```jsx
+	    // READ
+	    GET /board               : list
+	    GET /board/{no}          : view (MVC servlet 사용 시 /board?a=view&no=...)
+	
+	    // CREATE
+	    POST /board              : insert (MVC servlet사용 시 /board?a=insert)
+	    ------------------
+	    title=....&contents=..... (data옴)
+	
+	    // DELETE
+	    DELETE /board/{no}       : delete (MVC servlet사용 시 /board?a=delete&no=...)
+	
+	    // UPDATE
+	    PUT /board/{no}          : update (MVC servlet사용 시 /board?a=update&no=...)
+	    ```
+
+* UserController
+
+	```java
+	public String update2(
+				@RequestParam(value="n", required=true, defaultValue="") String name,
+				@RequestParam(value="a", required=true, defaultValue="0") int age) {
+			System.out.println("---" + name + ":" + age);
+	```
+	* defaultValue 설정 시 n parameter가 없이 와도 400 error내지 않도록 value를 설정해줄 수 있음 
+	* defaultValue는 param이 int여도 무조건 String으로 설정해줌
