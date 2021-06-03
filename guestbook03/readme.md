@@ -31,7 +31,7 @@
 	* @RequestMapping 
 		* method(handler) 단독 mapping
 	* @Autowired 
-		* 부모 Context인 Root Application Context내에 있는 EmaillistRepository 객체를 찾기 위함
+		* 부모 Context인 Root Application Context내에 있는 GuestbookRepository 객체를 찾기 위함
 		* DI(의존성 주입 - Root Context와 Web Context사이)가 잘 되어있다면 잘 wiring됨
 	* @ResponseBody 
 		* 안씀; 모든 handler가 jsp로 forwarding or redirecting
