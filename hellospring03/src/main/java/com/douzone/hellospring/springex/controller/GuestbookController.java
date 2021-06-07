@@ -7,22 +7,23 @@ import org.springframework.web.bind.annotation.ResponseBody;
 /*
  * RequestMapping
  * 클래스(type) 단독 mapping
+ * - interceptor추가 후 문제가 생겨서 class+handler mapping사용
  * 
  * @author melon
  * */
 
 @Controller
-@RequestMapping("/guestbook/*")
+@RequestMapping("/guestbook")
 public class GuestbookController {
 	
 	@ResponseBody
-	@RequestMapping
+	@RequestMapping("/list")
 	public String list() {
 		return "GuestbookController:list";
 	}
 	
 	@ResponseBody
-	@RequestMapping
+	@RequestMapping("/delete")
 	public String delete() {
 		return "GuestbookController:delete";
 	}

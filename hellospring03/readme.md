@@ -38,6 +38,7 @@
 		
 		<bean id=" memberController" class= "com.example.controller.MemberController"> 
 		```
+	* interceptor 설정
   * targeted runtime 설정 : Apache tomcat v8.5 체크
   * maven -> update 시키기
 		
@@ -124,3 +125,12 @@
 	```
 	* defaultValue 설정 시 n parameter가 없이 와도 400 error내지 않도록 value를 설정해줄 수 있음 
 	* defaultValue는 param이 int여도 무조건 String으로 설정해줌
+
+## 5. Interceptor
+
+* MyInterceptor01 : implements HandlerInterceptor
+	* preHandler : request 받는 것 관련
+	* postHandler : response받고 처리
+	* afterCompletion : response받음. view resolver, view 관련
+* MyInterceptor02 : extends HandlerInterceptorAdapter
+	* preHandler

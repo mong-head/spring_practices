@@ -39,10 +39,10 @@ public class HelloController {
 		return "/WEB-INF/views/hello4.jsp";   //string return
 	}
 	
-	// hello4 고친 방법
-	@RequestMapping("/hello4")
-	public String hello4(@ModelAttribute String name) {
-		
-		return "/WEB-INF/views/hello4.jsp";   //string return
-	}
+//	// hello4 고친 방법
+//	@RequestMapping("/hello4")
+//	public String hello4(@ModelAttribute String name) {
+//		
+//		return "/WEB-INF/views/hello4.jsp";   //string return
+//	}
 }
