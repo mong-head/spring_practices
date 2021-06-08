@@ -24,4 +24,4 @@
 		* logger
 			* /ex2 : file2 appender, debug level (debug, info, warn, error)
 			* /ex3 : console, file3 appender , warn level (warn, error)
-			* default : console
+			* default : console, info level
