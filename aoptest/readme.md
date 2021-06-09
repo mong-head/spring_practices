@@ -18,7 +18,7 @@
 
 * proxy : 중재
 
-	<img src="https://user-images.githubusercontent.com/52481037/121286848-64f4d900-c91b-11eb-9a21-2547e9222495.jpg" width="40%"/>
+	<img src="https://user-images.githubusercontent.com/52481037/121286848-64f4d900-c91b-11eb-9a21-2547e9222495.jpg" width="10%"/>
 
 ### 1. Advisor 작성 (5개) ([aspect.MyAspect](https://github.com/mong-head/spring_practices/blob/master/aoptest/src/main/java/com/douzone/aoptest/aspect/MyAspect.java))
 
@@ -88,11 +88,11 @@
 			```
 		
 * 긴 package 이름 대체
-	* "*..*"
+	```*..*```
 
 * parameter는 잘 명시하지 않음
-	* ..
+	```..```
 	
 * method 명시 안할 떄
-	* "*" 로 작성
+	```*``` 로 작성
 	
