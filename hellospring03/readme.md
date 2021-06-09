@@ -129,8 +129,10 @@
 ## 5. Interceptor
 
 * MyInterceptor01 : implements HandlerInterceptor
-	* preHandler : request 받는 것 관련
-	* postHandler : response받고 처리
-	* afterCompletion : response받음. view resolver, view 관련
+	* interface는 3개 모두 구현 강제
+		* preHandler : request 받는 것 관련
+		* postHandler : response받고 처리
+		* afterCompletion : response받음. view resolver, view 관련
 * MyInterceptor02 : extends HandlerInterceptorAdapter
-	* preHandler
+	* abstract class는 구현하고픈 것 구현 가능
+		* preHandler만 구현함
