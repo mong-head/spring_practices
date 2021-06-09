@@ -78,7 +78,7 @@
 			```java
 			@After("execution(public com.douzone.~~))
 			```
-		* "*" 로 대체
+		* ```*``` 로 대체
 			```java
 			@After("execution(* com.douzone.~~))
 			```
@@ -88,11 +88,11 @@
 			```
 		
 * 긴 package 이름 대체
-	```*..*```
+	* ```*..*```
 
 * parameter는 잘 명시하지 않음
-	```..```
+	* ```..```
 	
 * method 명시 안할 떄
-	```*``` 로 작성
+	* ```*``` 로 작성
 	
