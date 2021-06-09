@@ -10,16 +10,18 @@
 <form method="post" action="upload" enctype="multipart/form-data">
 
 	<label>email:</label>
-	<input type="text" name="email" value="kickscar@gmail.com">
+	<input type="text" name="email" value="mong@gmail.com">
 	<br><br>
 	
 	<label>파일1:</label>
-	<input type="file" name="file1">
+	<input type="file" name="file">
 	<br><br>
 	
+	<!-- 
 	<label>파일2:</label>
-	<input type="file" name="file2">
+	<input type="file" name="file">
 	<br><br>
+	 -->
 	
 	<br>
 	<input type="submit" value="upload">
