@@ -14,8 +14,13 @@
 
 ### 0. 개요
 
+<img src="https://user-images.githubusercontent.com/52481037/121286570-f9127080-c91a-11eb-8371-198d75ea5279.jpg" width="60%"/>
 
-### 1. Advisor 작성 (5개) ([aspect.MyAspect](/src/main/java/com/douzone/aoptest/aspect/MyAspect.java))
+* proxy : 중재
+
+	<img src="https://user-images.githubusercontent.com/52481037/121286848-64f4d900-c91b-11eb-9a21-2547e9222495.jpg" width="40%"/>
+
+### 1. Advisor 작성 (5개) ([aspect.MyAspect](https://github.com/mong-head/spring_practices/blob/master/aoptest/src/main/java/com/douzone/aoptest/aspect/MyAspect.java))
 
 - before :  method block 실행 전
 - after : method block 실행 후
@@ -68,20 +73,26 @@
 ### 3. Point Cut 기술 방법
 
 * 접근지시자는 생략가능
-	* public 대신 * 로 대체많이 함
-	```java
-	@After("execution(public com.douzone.~~))
-	```
-	```java
-	@After("execution(* com.douzone.~~))
-	```
+	* public 생략하거나 * 로 대체많이 함
+		* 생략 전
+			```java
+			@After("execution(public com.douzone.~~))
+			```
+		* "*" 로 대체
+			```java
+			@After("execution(* com.douzone.~~))
+			```
+		* 생략
+			```java
+			@After("execution(com.douzone.~~))
+			```
+		
 * 긴 package 이름 대체
-	* *..*
+	* "*..*"
 
 * parameter는 잘 명시하지 않음
 	* ..
 	
 * method 명시 안할 떄
-	* * 로 작성
+	* "*" 로 작성
 	
-## 실행결과
