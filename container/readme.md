@@ -22,13 +22,21 @@
 
 * eclipse
 	* src/main/java
-		* com.douzone.container.user : User.java, Friend.java
-		* com.douzone.container.config.user : AppConfig.java - java 설정
+		* com.douzone.container.user
+			* User.java
+			* Friend.java
+		* com.douzone.container.config.user 
+			* AppConfig.java - java 설정
 	* src/main/resources/
-		* com.douzone.container.config.user : applicationContext.xml - xml 설정
-		* com.douzone.container.config.user.test : AppConfigTest.java, XmlConfigTest.java (java 및 xml 설정한 것 test), 임시 (JUnit시 없앨 것)
+		* com.douzone.container.config.user
+			* applicationContext.xml - xml 설정
+		* com.douzone.container.config.user.test (임시 (JUnit시 없앨 것))
+			* AppConfigTest.java (java config test
+			* XmlConfigTest.java (xml config test)
 	* src/test/java
-		* com.douzone.container.user : AppConfigTest.java, XmlConfigTest.java (java 및 xml 설정한 것 test)
+		* com.douzone.container.user (java 및 xml 설정한 것 test)
+			* AppConfigTest.java
+			* XmlConfigTest.java
 		
 	
 --> compile (jar)
