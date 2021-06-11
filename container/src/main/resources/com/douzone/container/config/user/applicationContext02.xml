@@ -8,20 +8,59 @@
         http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util.xsd
         http://www.springframework.org/schema/task http://www.springframework.org/schema/task/spring-task.xsd">
 
-	<!-- Connection Pool DataSource-->
-	<bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource">
-		<property name="driverClassName" value="org.mariadb.jdbc.Driver" />
-		<property name="url" value="jdbc:mysql://192.168.254.40:3307/webdb?characterEncoding=utf8" />
-		<property name="username" value="webdb" />
-		<property name="password" value="webdb" />
+	<!-- 기본 생성자로 bean 생성 -->
+	<bean id="user1" class="com.douzone.container.user.User1"/>
+	<bean id="user" name="usr" class="com.douzone.container.user.User"/>
+	
+	<!-- parameter 1개인 생성자로 bean 생성 -->
+	<bean id="user2" name="usr2" class="com.douzone.container.user.User">
+		<constructor-arg value="둘리"/>
 	</bean>
-
-	<context:annotation-config />
-
-	<context:component-scan base-package="com.douzone.container.user">
-		<context:include-filter type="annotation" expression="org.springframework.stereotype.Repository" />
-		<context:include-filter type="annotation" expression="org.springframework.stereotype.Service" />
-		<context:include-filter type="annotation" expression="org.springframework.stereotype.Component" />
-	</context:component-scan>
-
+	
+	<!-- parameter 2개인 생성자로 bean 생성 1 -->
+	<bean id="user3" class="com.douzone.container.user.User">
+		<constructor-arg value="3"/>
+		<constructor-arg value="마이콜"/>
+	</bean>
+	
+	<!-- parameter 2개인 생성자로 bean 생성 2 -->
+	<bean id="user4" class="com.douzone.container.user.User">
+		<constructor-arg index="1" value="또치"/>
+		<constructor-arg index="0" value="4"/>
+	</bean>
+	
+	<!-- setter 사용하기 -->
+	<bean id="user5" class="com.douzone.container.user.User">
+		<property name="no" value="5"/>
+		<property name="name" value="도우너"/>
+	</bean>
+	
+	
+	
+	<bean id="friend" class="com.douzone.container.user.Friend">
+		<constructor-arg value="길동이" />
+	</bean>
+	
+	<!-- User 객체 bean을 생성하면서 Friend bean DI하기 -->
+	<bean id="user6" class="com.douzone.container.user.User">
+		<property name="no" value="6"/>
+		<property name="name" value="영희"/>
+		<!-- DI -->
+		<property name="friend" ref="friend"/>
+	</bean>
+	
+	<!-- collection setting -->
+	<!-- setter를 사용한 List setting -->
+	<bean id="user7" class="com.douzone.container.user.User">
+		<property name="no" value="7"/>
+		<property name="name" value="아이언맨"/>
+		<property name="friends">
+			<!-- 좋은 방법은 x -->
+			<list>
+				<value>스파이더맨</value>
+				<value>캡틴아메리카</value>
+				<value>헐크</value>
+			</list>
+		</property>
+	</bean>
 </beans>

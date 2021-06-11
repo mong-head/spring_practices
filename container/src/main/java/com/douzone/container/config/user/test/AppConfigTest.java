@@ -1,4 +1,4 @@
-package com.douzone.container.user.test;
+package com.douzone.container.config.user.test;
 
 public class AppConfigTest {
 

@@ -10,22 +10,24 @@
 	* applicationContext01.xml : auto config
 		* scan : com.douzone.container.user
 	* applicationContext02.xml : bean config
-		* 
+		* bean 설정
+	
 		
 ## description
 
 * eclipse
 	* src/main/java
 		* com.douzone.container.user : User.java, Friend.java
-		* com.douzone.container.user.test : AppConfigTest.java, XmlConfigTest.java (java 및 xml 설정한 것 test), 임시 (JUnit시 없앨 것)
 		* com.douzone.container.config.user : AppConfig.java - java 설정
 	* src/main/resources/
 		* com.douzone.container.config.user : applicationContext.xml - xml 설정
+		* com.douzone.container.config.user.test : AppConfigTest.java, XmlConfigTest.java (java 및 xml 설정한 것 test), 임시 (JUnit시 없앨 것)
 	* src/test/java
 		* com.douzone.container.user : AppConfigTest.java, XmlConfigTest.java (java 및 xml 설정한 것 test)
 		
 	
 --> compile (jar)
+
 	```text
 	com.douzone.container.config.user
 		|--- AppConfig.class (compile : java->class)
