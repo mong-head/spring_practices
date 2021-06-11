@@ -11,6 +11,11 @@
 		* scan : com.douzone.container.user
 	* applicationContext02.xml : bean config
 		* bean 설정
+	* AppConfig01.java
+		* @Bean  : bean 설정
+	* AppConfig02.java
+		* @Bean  : bean 설정
+		* @Configuration : bean singleton
 	
 		
 ## description
@@ -28,7 +33,6 @@
 	
 --> compile (jar)
 
-	```text
 	com.douzone.container.config.user
 		|--- AppConfig.class (compile : java->class)
 		|--- applicationContext.xml
@@ -37,10 +41,18 @@
 		|--- Friend.class
 		|--- XmlConfigTest.class
 		|--- appConfigTest.class
-	```
 	
 ## Test For What
 
-* XML Config
-	* Auto Config : annotation scanning
-	* Bean Config
+* Config
+	
+	* XML Config
+		* Auto Config : annotation scanning 경로 설정하면 하나하나 bean등록할 필요가 X
+		* Bean Config : 각각 bean 등록 ( 잘 사용 X ) 
+	* Java Config
+		* Auto Config
+		* Bean Config
+	
+* Context
+	* BeanFactory (사용X)
+	* ApplicationContext (사용 O)
