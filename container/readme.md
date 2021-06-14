@@ -7,6 +7,11 @@
 * 설정
 	* pom.xml
 		* spring context
+		* test
+			* junit : 전체 project를 구동하지 않고 단위 코드 테스트를 할 수 있게 하는 library
+			* spring-test : spring 내부에서 test하기 위해 사용, JUnit기능 확장
+		* test log 얻기 위한 설정
+			* spring-rules : console 출력문이 잘 나왔는 지 확인하기 위해 사용
 	* applicationContext01.xml : auto config
 		* scan : com.douzone.container.user
 	* applicationContext02.xml : bean config
@@ -16,6 +21,10 @@
 	* AppConfig02.java
 		* @Bean  : bean 설정
 		* @Configuration : bean singleton
+	* CDPlayerConfig.java
+		* auto scanning 설정 
+	* CDPlayerConfig.xml
+		* auto Scanning 설정 : com.douzone.container.soundsystem
 	
 		
 ## description
