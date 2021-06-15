@@ -8,6 +8,7 @@
 
 * 기본적인 configuration 알아보기
 	* User
+		
 	* CD, DVD
 		<img src="https://user-images.githubusercontent.com/52481037/122005131-392c9400-cdf0-11eb-9ddd-560feedbfbd7.jpg" width="40%" />
 
