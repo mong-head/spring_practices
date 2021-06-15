@@ -8,8 +8,9 @@
 
 * 기본적인 configuration 알아보기
 	* User
-		
+		* user, friend
 	* CD, DVD
+	
 		<img src="https://user-images.githubusercontent.com/52481037/122005131-392c9400-cdf0-11eb-9ddd-560feedbfbd7.jpg" width="40%" />
 
 ## Test For What
@@ -51,7 +52,9 @@
 		* @Bean  : bean 설정
 		* @Configuration : bean singleton
 * CD, DVD config
+
 	<img src="https://user-images.githubusercontent.com/52481037/122006753-2c10a480-cdf2-11eb-8f2f-172ac4cdbe32.jpg" width="40%"/>
+	
 	* CDPlayerConfig.java
 		* auto scanning 설정 
 	* CDPlayerConfig.xml
