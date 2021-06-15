@@ -39,7 +39,7 @@ public class CdPlayerJavaConfigTest {
 	@Test
 	public void testPlay() {
 		cdPlayer.play();
-		assertEquals("playing 붕붕 by 김하온",systemOutRule.getLog().replace("\r\n","")); 
+		assertEquals("playing 붕붕 by 김하온",systemOutRule.getLog().replace("\r\n","").replace("\n", "")); 
 		// systemoutln 으로 한 경우 줄바꿈을 없애고 확인
 	}
 	
