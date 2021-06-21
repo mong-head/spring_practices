@@ -51,6 +51,17 @@
 	* AppConfig02.java
 		* @Bean  : bean 설정
 		* @Configuration : bean singleton
+			* bean을 두 번 생성하지 않게 해줌
+			```java
+			@Bean
+			class A(){
+			}
+			
+			@Bean
+			class B(){
+				return a();
+			}
+			```
 * CD, DVD config
 
 	<img src="https://user-images.githubusercontent.com/52481037/122006753-2c10a480-cdf2-11eb-8f2f-172ac4cdbe32.jpg" width="40%"/>
