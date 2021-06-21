@@ -52,14 +52,16 @@
 		* @Bean  : bean 설정
 		* @Configuration : bean singleton
 			* bean을 두 번 생성하지 않게 해줌
+			* 밑의 코드에서 @Configuration이 없는 경우 A bean이 두 번 생성되지만, @Configuration이 있는 경우 한 번만 생성
 			```java
 			@Bean
 			class A(){
+				return a();
 			}
 			
 			@Bean
 			class B(){
-				return a();
+				return A();
 			}
 			```
 * CD, DVD config
